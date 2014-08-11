@@ -392,7 +392,7 @@ body {
   text-align: left;
 }
 
-#rulesBox {
+#rulesBox, #gamecredits {
   background-color: #60c060;
   border-color:  #006000 #90f090 #90f090 #006000;
   border-style: solid;
@@ -403,7 +403,7 @@ body {
   text-align: left;
   width: auto;
   position: absolute;
-	top: 65px;
+	top: 100px;
 }
 
 input.button {

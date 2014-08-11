@@ -400,7 +400,7 @@ function initGame() {
 // Blackjack hand object.                    
 // ----------------------------------------------------------------------------
 
-Hand.prototype.leftIncr  =  1.9;  // For positioning cards.
+Hand.prototype.leftIncr  =  2.5;  // For positioning cards.
 Hand.prototype.topIncr   =  0.2;
 Hand.prototype.rollEvery =  5;
 
@@ -1093,6 +1093,21 @@ function toggleRules() {
   }
 }
 
+function toggleCredits() {
+
+  var el;
+
+  // Display or hide the game rules text.
+
+  el = document.getElementById("gamecredits");
+  if (el.style.display == "") {
+    el.style.display = "block";
+  }
+  else {
+    el.style.display = "";
+  }
+}
+
 function addClassName(el, name)
 {
 	// Remove the class name if it already exists in the element's class name
@@ -1199,7 +1214,7 @@ function removeClassName(el, name)
 		<input id="hit" class="button" type="reset" value="Hit" onclick="playerHit();return false;">
 		<input id="stand" class="button" type="reset" value="Stand" onclick="playerStand();return false;">
   </div>
-  
+  <a href="#" id="credits" onclick="toggleCredits();return false;">Credits</a>
 </form>
 
 <!-- Rules text. -->
@@ -1349,6 +1364,10 @@ function removeClassName(el, name)
     <li>Aces may not be resplit.</li>
   </ul>
 
+</div>
+
+<div id="gamecredits">
+icons provided by http://banzaitokyo.com/casino
 </div>
 		
 		
